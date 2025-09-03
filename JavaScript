@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Loop with JavaScript</title>
+</head>
+<body>
+
+<h2>PHP Loop Output in JavaScript</h2>
+
+<div id="output"></div>
+
+<script>
+    // PHP generates a JavaScript array
+    const items = <?php
+        data = [];
+        for (i = 1; i <= 5;i++) {
+            data[] = "Itemi";
+        }
+        echo json_encode($data);
+    ?>;
+
+    // JavaScript displays the data
+    const outputDiv = document.getElementById('output');
+    items.forEach(item => {
+        const p = document.createElement('p');
+        p.textContent = item;
+        outputDiv.appendChild(p);
+    });
+</script>
+
+</body>
+</html>
